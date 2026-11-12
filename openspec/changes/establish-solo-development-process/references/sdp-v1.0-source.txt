@@ -1,0 +1,399 @@
+QUY TRÌNH PHÁT TRIỂN PHẦN MỀM CHUẨN CHO CÔNG TY
+Software Development Process (SDP) — Phiên bản đề xuất 1.0
+
+Tôi đề xuất xây dựng một bộ quy trình phát triển phần mềm cấp công ty, có thể áp dụng thống nhất cho nhiều dự án, nhiều đội phát triển và nhiều loại sản phẩm.
+
+Quy trình được thiết kế theo định hướng:
+- ISO/IEC/IEEE 12207: Quản lý vòng đời phần mềm.
+- ISO 9001 và CMMI: Chuẩn hóa, kiểm soát và cải tiến quy trình.
+- Agile/Scrum: Quản lý phát triển theo vòng lặp.
+- DevSecOps: Tích hợp phát triển, bảo mật, kiểm thử và vận hành.
+- ISO/IEC 25010: Xây dựng tiêu chí chất lượng sản phẩm.
+Đây là quy trình nội bộ tham chiếu các tiêu chuẩn trên, không mặc nhiên đồng nghĩa với việc đạt chứng nhận ISO hoặc cấp độ CMMI.
+I. Kiến trúc tổng thể quy trình
+Tôi khuyến nghị chia thành 8 giai đoạn với 7 cổng kiểm soát (Quality Gates).
+01
+
+Tiếp nhận & khởi tạo dự án
+
+Chủ trì: Sales / PM / Sponsor
+
+
+G1 · Phê duyệt khởi tạo
+
+
+
+02
+
+Phân tích & xác nhận yêu cầu
+
+Chủ trì: BA / PO
+
+
+G2 · Baseline yêu cầu
+
+
+
+03
+
+Thiết kế giải pháp & kiến trúc
+
+Chủ trì: Architect / Tech Lead
+
+
+G3 · Phê duyệt thiết kế
+
+
+
+04
+
+Lập kế hoạch & chuẩn bị
+
+Chủ trì: PM / Tech Lead / QA Lead
+
+
+G4 · Sẵn sàng phát triển
+
+
+
+05
+
+Phát triển & tích hợp
+
+Chủ trì: Developer / Tech Lead
+
+
+G5 · Sẵn sàng kiểm thử
+
+
+
+06
+
+Kiểm thử & nghiệm thu
+
+Chủ trì: QA / BA / PO
+
+
+G6 · Sẵn sàng phát hành
+
+
+
+07
+
+Triển khai & bàn giao
+
+Chủ trì: DevOps / PM / Operations
+
+
+G7 · Chấp nhận bàn giao
+
+
+
+08
+
+Vận hành & cải tiến
+
+Chủ trì: Operations / Support / PM
+
+
+Đánh giá định kỳ
+
+
+
+Các Quality Gates là điểm kiểm soát bắt buộc trước khi chuyển sang hoạt động có rủi ro cao hơn. Trong Agile, chúng có thể được áp dụng cho từng Epic, Feature, Sprint hoặc Release, không nhất thiết phải chờ toàn bộ dự án hoàn thành một giai đoạn.
+II. Cơ cấu vai trò và trách nhiệm
+Vai trò	Trách nhiệm chính	Quyền phê duyệt
+Sponsor / Ban giám đốc	Ngân sách, mục tiêu kinh doanh, nguồn lực	Khởi tạo, thay đổi lớn
+PM – Project Manager	Tiến độ, chi phí, rủi ro, điều phối	Kế hoạch, điều phối release
+PO – Product Owner	Giá trị sản phẩm, ưu tiên backlog	Phạm vi sản phẩm, nghiệm thu nghiệp vụ
+BA – Business Analyst	Phân tích, đặc tả, quản lý yêu cầu	Xác nhận tính đầy đủ của yêu cầu
+Architect / Tech Lead	Kiến trúc, công nghệ, chất lượng kỹ thuật	Thiết kế, tiêu chuẩn kỹ thuật
+Developer	Coding, unit test, sửa lỗi	Không tự phê duyệt code của mình
+QA Lead / Tester	Chiến lược test, kiểm thử, chất lượng	Kết quả kiểm thử, QA sign-off
+DevOps / SRE	CI/CD, hạ tầng, monitoring, rollback	Xác nhận sẵn sàng triển khai
+Security	Kiểm soát rủi ro bảo mật	Security sign-off theo mức rủi ro
+Operations / Support	Vận hành, hỗ trợ, xử lý sự cố	Tiếp nhận vận hành
+
+Trong công ty nhỏ, một người có thể kiêm nhiều vai trò. Tuy nhiên, cần duy trì nguyên tắc phân tách trách nhiệm đối với các hoạt động quan trọng: người viết code không tự duyệt thay đổi của mình; người yêu cầu phát hành không được tự bỏ qua toàn bộ kiểm soát chất lượng.
+III. Quy trình chi tiết theo từng giai đoạn
+1. Tiếp nhận và khởi tạo dự án
+Mục tiêu: Xác định dự án có đáng thực hiện, có khả thi và có đủ nguồn lực hay không.
+Hạng mục	Quy định
+Đầu vào	Yêu cầu khách hàng hoặc đề xuất sản phẩm
+Chủ trì	PM, Sponsor
+Phối hợp	Sales, BA, Tech Lead
+Công việc	Khảo sát sơ bộ, xác định phạm vi, ước lượng, phân tích rủi ro
+Tài liệu	Project Charter, Scope, Estimation, Risk Register
+Phê duyệt G1	Sponsor hoặc cấp có thẩm quyền
+Đầu ra	Dự án được cấp mã, ngân sách, PM và mục tiêu
+
+Quy định: Không cam kết phạm vi, chi phí hoặc thời hạn chính thức khi chưa có căn cứ ước lượng và phê duyệt phù hợp.
+2. Phân tích và xác nhận yêu cầu
+Mục tiêu: Đảm bảo yêu cầu rõ ràng, có thể phát triển và kiểm thử.
+
+BA thực hiện khảo sát, mô hình hóa quy trình nghiệp vụ, viết User Stories hoặc SRS, xác định Acceptance Criteria và các yêu cầu phi chức năng.
+
+Tài liệu tối thiểu:
+- BRD/SRS hoặc Product Backlog có cấu trúc.
+- User Stories và Acceptance Criteria.
+- Business Rules và mô hình nghiệp vụ khi cần.
+- Non-functional Requirements: hiệu năng, bảo mật, khả dụng, khả năng mở rộng.
+Phê duyệt G2: PO hoặc đại diện khách hàng có thẩm quyền xác nhận phạm vi và tiêu chí nghiệm thu; Tech Lead và QA xác nhận yêu cầu đủ rõ để thiết kế, phát triển và kiểm thử.
+
+Sau G2, mọi thay đổi ảnh hưởng đến phạm vi, chi phí hoặc tiến độ phải được ghi nhận và đánh giá tác động.
+3. Thiết kế giải pháp và kiến trúc
+Mục tiêu: Có phương án kỹ thuật khả thi, bảo mật và bảo trì được.
+
+Tech Lead/Architect chịu trách nhiệm xây dựng kiến trúc, thiết kế database, API, tích hợp, phân quyền, luồng dữ liệu và các quyết định công nghệ.
+
+Tài liệu có thể bao gồm HLD, LLD, ERD, API Specification, Architecture Decision Records (ADR), UI/UX và Threat Model.
+
+Phê duyệt G3: Tech Lead/Architect phê duyệt thiết kế kỹ thuật; Security phê duyệt các nội dung bảo mật có rủi ro đáng kể; PO xác nhận thiết kế chức năng đáp ứng nghiệp vụ.
+4. Lập kế hoạch và chuẩn bị phát triển
+Mục tiêu: Đội dự án có đủ điều kiện để triển khai.
+
+PM cùng Tech Lead và QA Lead lập kế hoạch nhân sự, milestone, sprint, kiểm thử, release và quản lý rủi ro. DevOps chuẩn bị repository, CI/CD, môi trường và phân quyền.
+
+Phê duyệt G4: PM xác nhận nguồn lực và kế hoạch; Tech Lead xác nhận sẵn sàng kỹ thuật; QA Lead xác nhận chiến lược kiểm thử.
+
+Không đưa task vào phát triển khi chưa đáp ứng Definition of Ready, trừ trường hợp ngoại lệ đã được ghi nhận.
+5. Phát triển và tích hợp
+Mục tiêu: Tạo ra mã nguồn đáp ứng yêu cầu và tiêu chuẩn kỹ thuật.
+
+Luồng làm việc chuẩn:
+
+Backlog → In Progress → Code Review → CI Checks → Merge → Ready for QA
+
+Quy định tối thiểu:
+- Mỗi thay đổi phải liên kết với task, bug hoặc change request.
+- Không commit trực tiếp lên nhánh được bảo vệ.
+- Pull Request cần ít nhất một reviewer độc lập; thay đổi rủi ro cao cần reviewer bổ sung theo chính sách.
+- CI phải chạy các kiểm tra phù hợp: build, test, lint, dependency scan, secret scan.
+- Không lưu mật khẩu, token hoặc dữ liệu nhạy cảm trong source code.
+- Code chỉ được merge khi đạt các điều kiện bắt buộc hoặc có ngoại lệ được phê duyệt.
+G5: Tech Lead hoặc reviewer được ủy quyền xác nhận chất lượng code; hệ thống CI xác nhận các kiểm tra tự động đạt.
+6. Kiểm thử và nghiệm thu
+Mục tiêu: Xác nhận sản phẩm đáp ứng yêu cầu, đủ an toàn để phát hành.
+
+QA thực hiện kiểm thử theo mức độ rủi ro, bao gồm functional, integration, regression, performance và security testing khi phù hợp.
+
+Các lỗi được phân loại theo Severity và Priority, có người xử lý, trạng thái, bằng chứng và kết quả retest.
+
+G6 – Release Readiness:
+- Các Acceptance Criteria thuộc phạm vi release đã được xác nhận.
+- Các test bắt buộc đạt.
+- Không còn lỗi blocker/critical chưa được xử lý hoặc chưa có chấp thuận rủi ro hợp lệ.
+- Có kết quả UAT hoặc chấp thuận nghiệm thu theo hợp đồng.
+- Có kế hoạch deployment, backup, rollback và monitoring.
+- Các rủi ro còn lại được ghi nhận, có chủ sở hữu và người chấp nhận.
+7. Triển khai và bàn giao
+Mục tiêu: Phát hành an toàn, có khả năng khôi phục và có người tiếp nhận.
+
+DevOps thực hiện deployment theo kế hoạch được duyệt; QA/PO xác nhận smoke test; Operations tiếp nhận hướng dẫn vận hành và cơ chế hỗ trợ.
+
+G7: PM phối hợp PO/khách hàng và Operations xác nhận bàn giao theo phạm vi đã thống nhất.
+
+Phát hành Production phải có người chịu trách nhiệm, thời điểm triển khai, phiên bản, kết quả kiểm tra và phương án rollback.
+8. Vận hành và cải tiến
+Mục tiêu: Đảm bảo hệ thống ổn định và quy trình ngày càng hiệu quả.
+
+Operations theo dõi availability, performance, logs, alerts, incidents và yêu cầu hỗ trợ. Với sự cố nghiêm trọng, cần có incident owner, quy trình escalation, khôi phục dịch vụ và post-incident review.
+
+PM/Engineering Manager định kỳ đánh giá các chỉ số chất lượng, tiến độ và nguyên nhân lỗi để cập nhật quy trình.
+IV. Ma trận phê duyệt và phân quyền (Approval Matrix)
+Đây là phần quan trọng để tránh tình trạng nhiều người cùng chịu trách nhiệm nhưng không ai có quyền quyết định cuối cùng.
+Cổng	Người chuẩn bị	Người phê duyệt cuối	Bằng chứng bắt buộc
+G1 – Khởi tạo	PM	Sponsor	Project Charter
+G2 – Yêu cầu	BA	PO / Khách hàng	Requirements Baseline
+G3 – Thiết kế	Tech Lead	Architect / Tech Lead được ủy quyền	Design Review Record
+G4 – Kế hoạch	PM	PM / Delivery Manager	Approved Project Plan
+G5 – Code	Developer	Reviewer độc lập / Tech Lead	Approved PR, CI Result
+G6 – Release	QA Lead, PM	Release Authority được chỉ định	QA Sign-off, Risk Acceptance
+G7 – Bàn giao	PM, Operations	PO / Khách hàng và Operations theo phạm vi	Handover Acceptance
+
+Lưu ý: G6 nên có cơ chế phân quyền theo rủi ro. QA xác nhận chất lượng kiểm thử, Security xác nhận các rủi ro bảo mật thuộc phạm vi của mình, còn người có thẩm quyền phát hành chịu trách nhiệm quyết định đưa sản phẩm lên Production.
+Quy tắc phê duyệt
+- Không phê duyệt bằng trao đổi miệng đối với các cổng bắt buộc.
+- Mọi phê duyệt phải có người thực hiện, thời điểm, phiên bản và bằng chứng.
+- Khi không đạt điều kiện, trạng thái phải là Rejected, On Hold hoặc Approved with Exception.
+- Ngoại lệ phải có lý do, đánh giá rủi ro, thời hạn xử lý và người chịu trách nhiệm.
+- Không cho phép người không đủ thẩm quyền tự chấp nhận rủi ro nghiêm trọng.
+V. Bộ tài liệu chuẩn của công ty
+Tôi đề xuất tổ chức hệ thống tài liệu thành 3 cấp.
+Cấp 1 — Chính sách (Policies)
+
+Quy định những nguyên tắc bắt buộc trên toàn công ty: chất lượng, bảo mật, quản lý thay đổi, phân quyền và phát hành.
+
+
+Cấp 2 — Quy trình (Procedures / SOPs)
+
+Quy định ai thực hiện, các bước công việc, đầu vào, đầu ra, điểm kiểm soát và phê duyệt.
+
+
+Cấp 3 — Biểu mẫu và bằng chứng (Templates / Records)
+
+Các mẫu tài liệu, checklist, báo cáo, biên bản và dữ liệu chứng minh việc tuân thủ.
+
+
+Danh mục tài liệu đề xuất
+Mã tài liệu	Tên tài liệu	Loại
+POL-01	Software Quality Policy	Chính sách
+POL-02	Secure Development Policy	Chính sách
+SOP-01	Project Initiation Procedure	Quy trình
+SOP-02	Requirements Management	Quy trình
+SOP-03	Solution Design & Review	Quy trình
+SOP-04	Project & Sprint Management	Quy trình
+SOP-05	Coding & Code Review	Quy trình
+SOP-06	Software Testing & Defect Management	Quy trình
+SOP-07	Change & Release Management	Quy trình
+SOP-08	Deployment & Rollback	Quy trình
+SOP-09	Incident & Problem Management	Quy trình
+SOP-10	Configuration & Access Management	Quy trình
+SOP-11	Risk & Exception Management	Quy trình
+SOP-12	Process Audit & Improvement	Quy trình
+
+Bộ biểu mẫu tối thiểu gồm Project Charter, Requirement Specification, Architecture Review Checklist, Risk Register, Test Plan, UAT Record, Release Checklist, Change Request, Incident Report và Handover Checklist.
+
+Mỗi tài liệu phải có mã, phiên bản, chủ sở hữu, người phê duyệt, ngày hiệu lực và lịch sử thay đổi.
+VI. Các quy định bắt buộc trong công ty
+Tôi đề xuất ban hành các quy định sau thành chính sách nội bộ.
+
+Quản lý yêu cầu
+
+Mọi công việc phát triển phải có yêu cầu, người chịu trách nhiệm và tiêu chí nghiệm thu rõ ràng.
+
+
+
+Quản lý mã nguồn
+
+Source code phải nằm trong repository được quản lý, có kiểm soát quyền truy cập, branch protection và lịch sử thay đổi.
+
+
+
+Code review
+
+Không tự phê duyệt Pull Request của chính mình. Mọi ngoại lệ phải được ghi nhận và được người có thẩm quyền chấp thuận.
+
+
+
+Kiểm thử
+
+Các kiểm thử bắt buộc phải đạt trước release. Mức độ kiểm thử được xác định theo độ phức tạp và rủi ro.
+
+
+
+Bảo mật
+
+Không đưa secrets vào Git; áp dụng least privilege, kiểm tra dependency và xử lý lỗ hổng theo mức độ nghiêm trọng.
+
+
+
+Quản lý thay đổi
+
+Thay đổi phạm vi, ngân sách, lịch trình hoặc kiến trúc quan trọng phải được đánh giá tác động và phê duyệt.
+
+
+
+Quản lý phát hành
+
+Mỗi release có version, release notes, kết quả kiểm thử, người phê duyệt, phương án triển khai và rollback.
+
+
+
+Quản lý sự cố
+
+Sự cố Production phải được phân loại, giao người xử lý, lưu bằng chứng và thực hiện phân tích nguyên nhân khi cần.
+
+
+
+VII. Quản lý công việc và trạng thái chuẩn
+Để triển khai thực tế trên Jira, Azure DevOps hoặc GitLab, tôi đề xuất workflow:
+1
+
+Backlog
+
+
+2
+
+Ready for Dev
+
+
+3
+
+In Progress
+
+
+4
+
+Code Review
+
+
+5
+
+Ready for QA
+
+
+6
+
+In Testing
+
+
+7
+
+Ready for Release
+
+
+8
+
+Done
+
+
+
+Blocked, Reopened và Cancelled là các trạng thái ngoại lệ được quản lý riêng. Done chỉ được sử dụng khi đạt Definition of Done đã thống nhất.
+
+Mỗi task nên có tối thiểu: mã định danh, mô tả, loại công việc, mức ưu tiên, người thực hiện, Acceptance Criteria, liên kết yêu cầu, Pull Request, kết quả kiểm thử và phiên bản phát hành nếu có.
+VIII. KPI đo lường hiệu quả quy trình
+Không nên chỉ đánh giá đội phát triển bằng số lượng task hoặc dòng code.
+KPI	Ý nghĩa	Tần suất
+Lead Time for Changes	Thời gian từ thay đổi code đến Production	Hàng tuần
+Deployment Frequency	Tần suất triển khai thành công	Hàng tuần
+Change Failure Rate	Tỷ lệ thay đổi gây lỗi cần khắc phục	Hàng tháng
+Failed Deployment Recovery Time	Thời gian phục hồi sau deployment lỗi	Theo sự cố
+Escaped Defect Rate	Lỗi lọt ra môi trường sử dụng	Hàng tháng
+Sprint Goal Success	Mức độ đạt mục tiêu Sprint	Mỗi Sprint
+Rework Rate	Tỷ lệ công việc phải làm lại	Hàng tháng
+Quality Gate Compliance	Tỷ lệ tuân thủ các cổng kiểm soát	Hàng tháng
+
+Các chỉ tiêu cụ thể nên được xác định sau khi thu thập dữ liệu nền, thay vì áp dụng cùng một con số cho mọi team. Không dùng KPI riêng lẻ để đánh giá năng suất cá nhân.
+IX. Lộ trình áp dụng trong 90 ngày
+1. Ngày 1–15: Đánh giá hiện trạng
+   
+   Khảo sát quy trình đang dùng, vai trò, công cụ, các điểm nghẽn, rủi ro và mức độ tài liệu hóa.
+   
+   Đầu ra: Gap Analysis, Process Inventory
+2. Ngày 16–30: Thiết kế và ban hành bản thử nghiệm
+   
+   Xây dựng SOP, RACI, Approval Matrix, Quality Gates, checklist và bộ biểu mẫu tối thiểu.
+   
+   Đầu ra: SDP v1.0 Draft, Templates
+3. Ngày 31–60: Pilot trên 1–2 dự án
+   
+   Cấu hình workflow, Git rules, CI/CD, kiểm thử, đào tạo nhân sự và ghi nhận vấn đề thực tế.
+   
+   Đầu ra: Pilot Report, Improvement Backlog
+4. Ngày 61–90: Chuẩn hóa và mở rộng
+   
+   Điều chỉnh quy trình, phê duyệt chính thức, áp dụng trên các team và thiết lập dashboard theo dõi.
+   
+   Đầu ra: Approved SDP v1.0, KPI Dashboard, Audit Schedule
+
+X. Cơ chế quản trị quy trình sau khi ban hành
+Để quy trình không trở thành tài liệu chỉ để lưu trữ, công ty cần bổ nhiệm Process Owner — thường là Engineering Manager, Head of Delivery hoặc Quality Manager.
+
+Process Owner chịu trách nhiệm quản lý phiên bản quy trình, tiếp nhận đề xuất cải tiến, tổ chức kiểm tra định kỳ và báo cáo mức độ tuân thủ.
+
+Đề xuất chu kỳ quản trị:
+- Hằng Sprint: kiểm tra DoR, DoD, code review và chất lượng công việc.
+- Hằng tháng: đánh giá KPI, rủi ro, ngoại lệ và các sự cố.
+- Hằng quý: audit mẫu dự án và cập nhật quy trình.
+- Hằng năm hoặc khi có thay đổi lớn: rà soát toàn bộ chính sách, SOP và phân quyền.

@@ -1,0 +1,136 @@
+schema: intent-driven
+
+# Version baseline checked on 2026-11-12:
+# https://devblogs.microsoft.com/dotnet/announcing-dotnet-11/
+# https://www.npgsql.org/efcore/release-notes/11.0.html
+# https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL/10.0.3
+# https://www.postgresql.org/support/versioning/
+# https://react.dev/versions
+# https://vite.dev/releases
+context: |
+  Project: Acupuncture Scheduling System, an acupuncture appointment scheduling
+  system. Use Docs/KhaoSat_ChamCuu.docx and Docs/EPICS_ChamCuu.xlsx as business
+  discovery inputs. Do not infer requirements from the former AI Agent context.
+
+  Current stage: planning and workflow configuration. The source layout below
+  is a target convention; application projects have not been scaffolded yet.
+
+  Tech stack:
+  - Backend: C#, .NET 11, ASP.NET Core 11 Web API (net11.0), the latest stable
+    ASP.NET Core major release at the baseline date.
+  - Database: PostgreSQL 18.x, using the latest stable patch within that major.
+  - ORM: EF Core 10.x with Npgsql.EntityFrameworkCore.PostgreSQL 10.x and
+    EF Core migrations. Npgsql's EF Core 11 provider is still prerelease at
+    the baseline date, so use the stable EF Core 10/Npgsql 10 pair on .NET 11.
+    Recheck provider availability before scaffolding; upgrade the ORM pair
+    together only when a compatible stable provider is available.
+  - Dependency injection: the built-in Microsoft.Extensions.DependencyInjection
+    container, configured through module registration extensions and API Program.cs.
+  - Frontend: React 19.3, Vite 8.3, TypeScript with strict mode; a separate SPA
+    consuming the backend through HTTP/JSON APIs described by OpenAPI.
+  - Tooling: .NET SDK 11, dotnet CLI and NuGet for backend; Node.js 24 LTS and
+    npm for frontend. Pin exact compatible package versions during scaffolding,
+    commit the frontend lockfile, and align dotnet-ef with the EF Core version.
+  - Backend checks: xUnit for unit tests, ASP.NET Core WebApplicationFactory
+    for API integration tests, SDK analyzers and dotnet format.
+  - Frontend checks: TypeScript, ESLint, Vitest and React Testing Library.
+  - Redis, message brokers, external DI containers and additional UI/state
+    libraries are not part of the baseline; add them only for a concrete need.
+
+  Architecture: a modular monolith using Clean Architecture + DDD, organized
+  by bounded context. The backend is one deployable ASP.NET Core application.
+  Do not introduce microservices, independent service deployments, an API gateway
+  or network calls between internal modules.
+
+  Bounded contexts and DDD:
+  - Discover bounded contexts from business capabilities, ubiquitous language,
+    invariants, workflows and data ownership in the business inputs. Validate
+    the context map before choosing module names. An epic, database table,
+    entity or screen does not automatically define a bounded context.
+  - Each bounded context owns its domain model and application use cases.
+    Use entities, value objects, aggregates, aggregate roots and domain services
+    where they express actual business rules; keep simple CRUD simple.
+  - Aggregate boundaries follow transactional invariants. Define repository
+    interfaces around aggregate persistence needs rather than every table.
+  - Services here mean in-process application/domain services, not separately
+    deployed applications. Contexts collaborate through explicit contracts
+    or in-process integration interfaces; do not share domain models.
+  - Use one PostgreSQL database initially with schema ownership and a DbContext
+    per bounded context. A context must not access another context's tables,
+    DbContext, repositories or EF entities directly. Plan cross-context workflows
+    explicitly instead of assuming a transaction across context-owned schemas.
+  - Domain events may be handled in-process when useful. CQRS, MediatR and event
+    sourcing are not required by Clean Architecture or DDD.
+
+  Clean Architecture inside each bounded context:
+  - Domain: framework-independent C# business types and rules. No references to
+    ASP.NET Core, EF Core, Npgsql, Infrastructure or frontend code.
+  - Application: use cases, DTOs and interfaces for persistence/integrations.
+    Depends on its Domain, not EF Core, Infrastructure or the API. Keep EF types
+    and IQueryable out of application contracts.
+  - Infrastructure: EF Core DbContext, Fluent API mappings, migrations,
+    repository implementations and external adapters. Depends on Application
+    and Domain; database-specific configuration stays here.
+  - API: ASP.NET Core endpoints/controllers, HTTP contracts, middleware and the
+    composition root. Delegates business behavior to Application. Infrastructure
+    references are for dependency registration, not direct persistence access.
+  - Project references point inward: Application -> Domain;
+    Infrastructure -> Application and Domain; API -> Application and Infrastructure
+    for wiring. Domain and Application must not reference other contexts' internals.
+
+  Target source layout after bounded contexts are agreed:
+  - src/backend/Api/: the single ASP.NET Core host and composition root.
+  - src/backend/Modules/<BoundedContext>/Domain/
+  - src/backend/Modules/<BoundedContext>/Application/
+  - src/backend/Modules/<BoundedContext>/Infrastructure/
+  - src/frontend/: React + Vite + TypeScript application, organized by feature.
+  - tests/backend/: unit, integration and architecture dependency checks.
+  - Frontend tests live alongside the frontend features they cover.
+  - Create separate .csproj boundaries for module layers during scaffolding;
+    folders alone do not enforce Clean Architecture.
+
+  Conventions:
+  - Conventional commits when a commit is explicitly requested.
+  - Every new use case needs unit tests. Test PostgreSQL-specific persistence
+    behavior against PostgreSQL, not an EF Core InMemory substitute.
+  - Use asynchronous database I/O with CancellationToken propagation.
+  - Keep EF mappings in Infrastructure; business invariants remain in Domain
+    or Application and are enforced by appropriate database constraints too.
+
+  Constraints:
+  - Do not commit or push anything to GitHub. All work stays local.
+  - Keep credentials out of source control; use environment variables or
+    dotnet user-secrets for local configuration.
+
+rules:
+  proposal:
+    - Must use grill-me skill
+    - Identify affected business capabilities and candidate bounded contexts;
+      mark uncertain boundaries for discovery instead of inventing services.
+  specs:
+    - Must use gherkin-authoring skill
+    - Use the owning bounded context's business terms and describe observable
+      behavior, including relevant scheduling invariants and context interactions.
+  design:
+    - Must use c4-diagrams skill
+    - Keep the backend a modular monolith; show bounded contexts as internal
+      modules, not independently deployed services.
+    - State the owning bounded context and Clean Architecture layer for each
+      new artifact (Domain / Application / Infrastructure / API / Frontend).
+    - Identify relevant aggregates, invariants, repository interfaces and
+      Infrastructure implementations; justify cross-context contracts and data ownership.
+    - Name the module DI registrations and API Program.cs wiring being changed.
+    - Describe affected DbContexts, PostgreSQL schemas, EF Core mappings and
+      migrations, and any changed HTTP/OpenAPI contracts and frontend features.
+    - Verify the .NET, EF Core and Npgsql versions are compatible stable releases.
+  adr:
+    - Must use architectural-decision-records skill
+    - Only for architecturally significant decisions. Small or routine changes
+      get no ADR - an empty adr/ directory is the expected outcome.
+  tasks:
+    - "Group tasks by bounded context and dependency: Domain -> Application ->
+      Infrastructure and migrations -> API and DI wiring -> Frontend. Place
+      shared contracts before their consumers; keep one deployable backend."
+    - Every use case must have a paired unit test task; add PostgreSQL integration
+      and frontend behavior tests when the change affects those boundaries.
+    - Keep each task under ~2 hours of work
