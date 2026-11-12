@@ -2,8 +2,8 @@
 name: openspec-archive-change
 description: Archive a completed change in the experimental workflow. Use when the user wants to finalize and archive a change after implementation is complete.
 license: MIT
-compatibility: Requires openspec CLI.
 metadata:
+  compatibility: Requires openspec CLI.
   author: openspec
   version: "1.0"
   generatedBy: "1.3.1"
@@ -11,18 +11,20 @@ metadata:
 
 Archive a completed change in the experimental workflow.
 
+Before moving the change, follow `openspec-git-discipline`: verify the relevant implementation is integrated on main and the archive is within the authorized scope. File completion or successful verification does not grant commit, push or deployment rights. If the checkpoint is missing, report it without fabricating integration or blocking independent authorized planning work.
+
 **Input**: Optionally specify a change name. If omitted, check if it can be inferred from conversation context. If vague or ambiguous you MUST prompt for available changes.
 
 **Steps**
 
-1. **If no change name provided, prompt for selection**
+1. **Resolve the intended change**
 
-   Run `openspec list --json` to get available changes. Use the **AskUserQuestion tool** to let the user select.
+   Use the explicitly named change or the change clearly identified in the conversation. Run `openspec list --json` and ask for selection only when the intended scope is genuinely ambiguous.
 
    Show only active changes (not already archived).
    Include the schema used for each change if available.
 
-   **IMPORTANT**: Do NOT guess or auto-select a change. Always let the user choose.
+   Do not guess between ambiguous changes or ask the user to repeat a settled selection.
 
 2. **Check artifact completion status**
 
@@ -34,7 +36,7 @@ Archive a completed change in the experimental workflow.
 
    **If any artifacts are not `done`:**
    - Display warning listing incomplete artifacts
-   - Use **AskUserQuestion tool** to confirm user wants to proceed
+   - Use the available user-input capability to confirm user wants to proceed
    - Proceed if user confirms
 
 3. **Check task completion status**
@@ -45,7 +47,7 @@ Archive a completed change in the experimental workflow.
 
    **If incomplete tasks found:**
    - Display warning showing count of incomplete tasks
-   - Use **AskUserQuestion tool** to confirm user wants to proceed
+   - Use the available user-input capability to confirm user wants to proceed
    - Proceed if user confirms
 
    **If no tasks file exists:** Proceed without task-related warning.
@@ -63,7 +65,7 @@ Archive a completed change in the experimental workflow.
    - If changes needed: "Sync now (recommended)", "Archive without syncing"
    - If already synced: "Archive now", "Sync anyway", "Cancel"
 
-   If user chooses sync, use Task tool (subagent_type: "general-purpose", prompt: "Use Skill tool to invoke openspec-sync-specs for change '<name>'. Delta spec analysis: <include the analyzed delta spec summary>"). Proceed to archive regardless of choice.
+   If sync is within the user's authorized scope, perform the openspec-sync-specs workflow directly and use its actual result before archiving. Do not require a separate subagent.
 
 5. **Perform the archive**
 

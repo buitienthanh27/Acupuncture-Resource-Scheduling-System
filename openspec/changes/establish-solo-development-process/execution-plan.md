@@ -2,10 +2,10 @@
 
 | Thuộc tính | Giá trị |
 | --- | --- |
-| Mã / phiên bản | PLAN-SDP-SOLO-001 / 0.2 |
+| Mã / phiên bản | PLAN-SDP-SOLO-001 / 0.3 |
 | Trạng thái | Approved as roadmap, phụ lục của [proposal](proposal.md) |
 | Chủ sở hữu | Chủ dự án — người dùng trực tiếp triển khai |
-| Hiệu lực | Phương án và roadmap đã được chốt theo DEC-SDP-SOLO-001; P0.01/M0 Done, các nhiệm vụ khác vẫn Planned |
+| Hiệu lực | Phương án và roadmap đã được chốt theo DEC-SDP-SOLO-001; P0.01–P0.07 và M0 Done; các nhiệm vụ P1–P8 vẫn Planned khi kết thúc P0 |
 | Nguồn | [SDP v1.0](references/sdp-v1.0-source.txt), các quyết định của người dùng và cấu hình hiện tại |
 
 ## 1. Mục tiêu và ranh giới áp dụng
@@ -82,19 +82,19 @@ Mỗi task có ít nhất: ID, loại, mô tả, ưu tiên, phạm vi, AC, owner
 
 ## 5. Danh mục nhiệm vụ tổng thể
 
-P0.01 đã **Done** theo DEC-SDP-SOLO-001; 59 nhiệm vụ khác vẫn **Planned**. Các mã là roadmap quản lý; khi đưa vào `tasks.md` cần tách thành bước nhỏ, thường dưới hai giờ, đúng scope change và có kiểm tra tương ứng. Không tự gán hạn hoàn thành hoặc coi bảng này là ước lượng đã cam kết.
+P0.01–P0.07 đã **Done** theo quyết định và bằng chứng P0; 53 nhiệm vụ P1–P8 vẫn **Planned** khi kết thúc P0. Xem [records](../../../Docs/process/records.md). Các mã là roadmap quản lý; khi đưa vào `tasks.md` cần tách thành bước nhỏ, thường dưới hai giờ, đúng scope change và có kiểm tra tương ứng. Không tự gán hạn hoàn thành hoặc coi bảng này là ước lượng đã cam kết.
 
 ### P0 — Làm cho quy trình và công cụ nhất quán
 
 | ID | Nhiệm vụ | Đầu ra / điều kiện hoàn thành |
 | --- | --- | --- |
 | P0.01 | Rà soát tailoring solo của bản đề xuất | **Done** — chủ dự án đã chốt; bằng chứng DEC-SDP-SOLO-001 trong [proposal](proposal.md) |
-| P0.02 | Lập danh sách thiếu hụt hiện tại | Phân biệt cấu hình có thật với Git, CI, source app, môi trường và hồ sơ chưa có |
-| P0.03 | Sửa semantics artifact tùy chọn trong schema | Trường hợp không cần ADR vẫn có bản ghi quyết định không áp dụng được CLI nhận diện; không viết ADR giả để mở khóa tasks |
-| P0.04 | Rà soát khả năng chạy skills trên Codex | Tham chiếu Claude/OpenCode/tool không có được thay đúng hoặc đánh dấu không hỗ trợ; không chạy workflow hỏng |
-| P0.05 | Thống nhất Git workflow local | Có quy tắc main/branch/checkpoint/review phù hợp solo; hành vi commit/branch/merge chỉ trong phạm vi được người dùng cho phép |
-| P0.06 | Thiết kế bộ hồ sơ gọn và chỉ mục | Tìm được policy, SOP, record theo ID; không sao chép cùng thông tin ở nhiều nơi |
-| P0.07 | Thử workflow quy trình bằng change mẫu | Nhận diện đúng trạng thái artifact; file glossary/README không được dùng làm bằng chứng hoàn thành nhầm artifact nghiệp vụ |
+| P0.02 | Lập danh sách thiếu hụt hiện tại | **Done** — Phân biệt cấu hình có thật với Git, CI, source app, môi trường và hồ sơ chưa có; bằng chứng CHECK-P0-001/REVIEW-P0-001 |
+| P0.03 | Sửa semantics artifact tùy chọn trong schema | **Done** — Trường hợp không cần ADR vẫn có bản ghi quyết định không áp dụng được CLI nhận diện; không viết ADR giả để mở khóa tasks; bằng chứng CHECK-P0-001/REVIEW-P0-001 |
+| P0.04 | Rà soát khả năng chạy skills trên Codex | **Done** — Tham chiếu Claude/OpenCode/tool không có được thay đúng hoặc đánh dấu không hỗ trợ; không chạy workflow hỏng; bằng chứng CHECK-P0-001/REVIEW-P0-001 |
+| P0.05 | Thống nhất Git workflow local | **Done** — Có quy tắc main/branch/checkpoint/review phù hợp solo; hành vi commit/branch/merge chỉ trong phạm vi được người dùng cho phép; bằng chứng CHECK-P0-001/REVIEW-P0-001 |
+| P0.06 | Thiết kế bộ hồ sơ gọn và chỉ mục | **Done** — Tìm được policy, SOP, record theo ID; không sao chép cùng thông tin ở nhiều nơi; bằng chứng CHECK-P0-001/REVIEW-P0-001 |
+| P0.07 | Thử workflow quy trình bằng change mẫu | **Done** — Nhận diện đúng trạng thái artifact; file glossary/README không được dùng làm bằng chứng hoàn thành nhầm artifact nghiệp vụ; bằng chứng CHECK-P0-001/REVIEW-P0-001 |
 
 Điều kiện chuyển: công cụ không ép tạo bằng chứng giả hoặc chặn vô cớ ở artifact tùy chọn; các sửa đổi có tác động chỉ được áp dụng sau khi chốt và đặc tả phần liên quan.
 
@@ -392,3 +392,5 @@ Không đánh dấu các task trong kế hoạch này là đã hoàn thành ch�
 | --- | --- | --- |
 | 0.1 | 12/11/2026 | Lập roadmap 60 nhiệm vụ ở trạng thái Planned |
 | 0.2 | 12/11/2026 | Ghi quyết định DEC-SDP-SOLO-001; P0.01 và M0 Done; cập nhật hiện trạng Git, giữ các nhiệm vụ còn lại Planned |
+
+| 0.3 | 12/11/2026 | Hoàn thành P0.02–P0.07 và 26 task chi tiết, ghi checks/pilot/self-review; P1–P8 chưa tự được nghiệm thu |

@@ -41,7 +41,7 @@ artifacts:
       This is the foundation - specs, design, and tasks all build on this.
     requires: []
   - id: specs
-    generates: specs/**/*.md
+    generates: specs/**/spec.md
     description: Detailed specifications for the change
     template: spec.md
     instruction: >
@@ -185,12 +185,18 @@ artifacts:
     requires:
       - proposal
   - id: adr
-    generates: adr/**/*.md
+    generates: adr-index.md
     description: Architectural Decision Records for significant decisions in this change
-    template: adr.md
+    template: adr-index.md
     instruction: >
       Record each architecturally significant decision made in design.md as its
       own Architectural Decision Record.
+
+      Always create adr-index.md as the completion artifact for this review.
+      Use Review result: Decisions Recorded with links and statuses for real
+      ADRs, or Review result: Not Applicable with a concrete reason when no
+      significant decision exists. A glossary reference or README does not
+      replace the index. Index completion is not approval of an ADR or gate.
 
 
       Use the **architectural-decision-records skill**. The project style is
@@ -232,10 +238,11 @@ artifacts:
       anything a reader could infer from the code itself.
 
 
-      If no decision clears the bar - the common case - create zero ADR files,
-      leave `adr/` empty, and state plainly: "No architecturally significant
-      decisions in this change." That is a complete and correct `adr` artifact,
-      not a gap to fill. Never invent a decision to justify producing a file.
+      If no decision clears the bar, create zero ADR files and leave adr/ empty.
+      In adr-index.md record Review result: Not Applicable and a Reason that
+      explains why no architecturally significant decision is present. The
+      index completes the review artifact without inventing an ADR. Never
+      invent a decision to justify producing a file.
 
 
       Each ADR captures exactly ONE decision. Split bundled decisions into

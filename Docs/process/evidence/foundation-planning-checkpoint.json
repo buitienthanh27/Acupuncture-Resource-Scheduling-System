@@ -1,0 +1,303 @@
+{
+  "record": "GIT-FND-PLAN-001",
+  "recordedOn": "2026-11-12",
+  "timezone": "Asia/Saigon",
+  "status": "Proposed; no new commit permission, staging or commit performed",
+  "branch": "main",
+  "head": "af7c1f6927486fbeaa68e809357906740247d8bc",
+  "proposedCommitMessage": "chore: checkpoint process and ClinicFlow foundation planning",
+  "scope": "One local checkpoint for current process implementation, discovery and foundation planning; excludes user HTML demo; no push/deploy",
+  "fileCountIncludingManifest": 57,
+  "contentBytesExcludingManifest": 393457,
+  "manifestPath": "Docs/process/evidence/foundation-planning-checkpoint.json",
+  "manifestSelfHash": "Excluded to avoid recursive self-reference; approval review references the serialized manifest hash printed separately",
+  "excludedWorkingFiles": [
+    "Docs/ClinicFlow_Demo_v2.html"
+  ],
+  "initialSecretPatternReview": {
+    "result": "No recognizable findings in selected files",
+    "limits": "Filename and common credential-pattern review, not a guarantee of no sensitive information"
+  },
+  "files": [
+    {
+      "path": ".agents/commands/opsx-apply.md",
+      "bytes": 565,
+      "sha256": "70758b50e05dfe795177b5f0a128f6408865df15cc9125e43351f8803b2261d9"
+    },
+    {
+      "path": ".agents/commands/opsx-archive.md",
+      "bytes": 570,
+      "sha256": "18000ad4193e379029f55a754d8d8a2beac205c7decd93f337b36bf5f2252a5a"
+    },
+    {
+      "path": ".agents/commands/opsx-bulk-apply.md",
+      "bytes": 587,
+      "sha256": "6de8687eb363de33c1412059f2c70f685f7df1bf959852e0d88b9a52cd45a564"
+    },
+    {
+      "path": ".agents/commands/opsx-continue.md",
+      "bytes": 587,
+      "sha256": "05b6b3914775daef87197e3b54b02c7b7dd626d8b6ae3c0e169cc0602042b646"
+    },
+    {
+      "path": ".agents/commands/opsx-explore.md",
+      "bytes": 585,
+      "sha256": "cd7ce53a9e24aba77c276870f01b0610d08fbd334b9db0c4426ba1e27b0a1eb3"
+    },
+    {
+      "path": ".agents/commands/opsx-new.md",
+      "bytes": 573,
+      "sha256": "d0c37720a0da49bed2f0f481bb976b7772ff6cf25f8768bf01e37a734c0dc298"
+    },
+    {
+      "path": ".agents/commands/opsx-propose.md",
+      "bytes": 572,
+      "sha256": "5946910fe1642d9be38c11837d7e0ed089e073c08578b9579193fb78cccb53bc"
+    },
+    {
+      "path": ".agents/commands/opsx-sync.md",
+      "bytes": 551,
+      "sha256": "d5750c7e7310255b3903735f097404da06b435a876d099b4d3bea678c81617f0"
+    },
+    {
+      "path": ".agents/commands/opsx-verify.md",
+      "bytes": 576,
+      "sha256": "f44538be651f07158ef1f2df09a7e7de60baace7d209f2e6e1761ab5c1c4467e"
+    },
+    {
+      "path": ".agents/skills/adversarial-authoring/SKILL.md",
+      "bytes": 4626,
+      "sha256": "05fbf6751cdd35fdef20e6f8f1dde563faa4b5a4e1de190cbcb59e6a03397445"
+    },
+    {
+      "path": ".agents/skills/c4-diagrams/SKILL.md",
+      "bytes": 4345,
+      "sha256": "d58374afca9c526b0e02ec9e39264dd9b9805cc39c7e8f53fb97e908f2096455"
+    },
+    {
+      "path": ".agents/skills/openspec-apply-change/SKILL.md",
+      "bytes": 5301,
+      "sha256": "4fdcb323d85b6d548a19e32aab728858faf76c8cf93c2a2235b4ede60e4943e8"
+    },
+    {
+      "path": ".agents/skills/openspec-archive-change/SKILL.md",
+      "bytes": 4664,
+      "sha256": "7e3b9894a9247bc18328006571e926030ece368c96141788d3f02a26d985c640"
+    },
+    {
+      "path": ".agents/skills/openspec-bulk-apply-change/SKILL.md",
+      "bytes": 6449,
+      "sha256": "e3e833553b74e61859df9d907bcaf8ff632915bf49c974e868d2d3323c7d3e51"
+    },
+    {
+      "path": ".agents/skills/openspec-continue-change/SKILL.md",
+      "bytes": 4987,
+      "sha256": "41dd581bc3697651e1d94075e6e18091dfe384721533135ac4b10cfc7001ea0c"
+    },
+    {
+      "path": ".agents/skills/openspec-explore/SKILL.md",
+      "bytes": 11032,
+      "sha256": "6590717d0dbb5231ff86b928ac25a87f10ad0f6691214085752a6b698bcc897d"
+    },
+    {
+      "path": ".agents/skills/openspec-git-discipline/SKILL.md",
+      "bytes": 3264,
+      "sha256": "4ada926166c7a79949441168a90855493f342e129cbf44061812947fdfef904d"
+    },
+    {
+      "path": ".agents/skills/openspec-new-change/SKILL.md",
+      "bytes": 3241,
+      "sha256": "d8a9d7f5f1f795ce46eb1e72a966d0692a4ff380bae7828c47114f3ff8ea02cd"
+    },
+    {
+      "path": ".agents/skills/openspec-propose/SKILL.md",
+      "bytes": 4828,
+      "sha256": "8032954774c44d647a3153ca9787fcbaeaf7995de9a07972b078cb96d0f1b651"
+    },
+    {
+      "path": ".agents/skills/openspec-sync-specs/SKILL.md",
+      "bytes": 4687,
+      "sha256": "339c08e11155465108bb0f4bb0331156a18a3d5e363071df0d51b83cf9f4db17"
+    },
+    {
+      "path": ".agents/skills/openspec-verify-change/SKILL.md",
+      "bytes": 6831,
+      "sha256": "7a51085b734c061d18c22e27de813c119cb89b1166d30db4f958047a0c1aa878"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 372,
+      "sha256": "78c500fa06e56c6bbd7a225521162b8901fe07cc4a2e283f0ab59fb00631db9d"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 2625,
+      "sha256": "e677ea5808ac711cbcb04eb32f937ed6f444b9ba3effcb0759ca072b7be27c47"
+    },
+    {
+      "path": "Docs/discovery/overview-glossary-reference.md",
+      "bytes": 2101,
+      "sha256": "3d8f5bed5040da0f3b4393bdd640a18358364dcdd6fb0889c91ce58edd009fe7"
+    },
+    {
+      "path": "Docs/discovery/overview.md",
+      "bytes": 82349,
+      "sha256": "0c94675d35991b65599a28315a4fed26057d605078d9b062dfe7d662f2bbb238"
+    },
+    {
+      "path": "Docs/discovery/source-inventory.json",
+      "bytes": 2616,
+      "sha256": "41364a8faacca0181e298f458c5498e6c4d7befd4ff742d01481d49653f0edfd"
+    },
+    {
+      "path": "Docs/process/evidence/foundation-planning-checks.json",
+      "bytes": 1929,
+      "sha256": "d1c9c4622e664c6849ea21fcfab4a0ba7978e72b8edaa319c6046aa4a96afac9"
+    },
+    {
+      "path": "Docs/process/evidence/p0-baseline.json",
+      "bytes": 13940,
+      "sha256": "f60360de0844f561bf5966567b1ec0bdec744a6bbd51f6df05cddd120cee4019"
+    },
+    {
+      "path": "Docs/process/evidence/p0-checks.json",
+      "bytes": 4406,
+      "sha256": "b8bf27da22fa112cc51750112c0a5590af0af7c224adc7665447cb72bdcf1b2b"
+    },
+    {
+      "path": "Docs/process/evidence/skill-validation.json",
+      "bytes": 1939,
+      "sha256": "ea03d60d47e87390b83d0be922d03a96a215cf2a3f4b8b521780e2844dd31a0b"
+    },
+    {
+      "path": "Docs/process/handbook-glossary-reference.md",
+      "bytes": 1249,
+      "sha256": "11ebcf74050c53566100678f668df38eac419c588acee2f1058ede085ad1c711"
+    },
+    {
+      "path": "Docs/process/handbook.md",
+      "bytes": 16301,
+      "sha256": "dfba850dfe4deca544243eee5e4d9b78f0b65604021bba5014cef34206fa5bad"
+    },
+    {
+      "path": "Docs/process/records-glossary-reference.md",
+      "bytes": 348,
+      "sha256": "c64abe9a3eb525e9f24bb5f1a56363c91a6db7056a460d63cfaa90ccfc3ae41a"
+    },
+    {
+      "path": "Docs/process/records.md",
+      "bytes": 31729,
+      "sha256": "d4062a66cf4b48c151150b1c62f05e1628a9df941f5af6609d0c740f609ea7d9"
+    },
+    {
+      "path": "Docs/process/templates-glossary-reference.md",
+      "bytes": 767,
+      "sha256": "bcde2251fa1cb96cb24c62b9d3f230810d9d08569d4437523991650ea261cfd4"
+    },
+    {
+      "path": "Docs/process/templates.md",
+      "bytes": 9166,
+      "sha256": "ee685e6dabcca1ff32456ac0ea5c1bddb83edae36289760c86ee68c803bb6513"
+    },
+    {
+      "path": "glossary/business.md",
+      "bytes": 5470,
+      "sha256": "fab7907d25a8fdf4091b1c94517a873f4ae7a3bf89bb380794e965cf1aba8bef"
+    },
+    {
+      "path": "openspec/changes/establish-clinicflow-local-foundation/.openspec.yaml",
+      "bytes": 42,
+      "sha256": "d262a6cab64e214563795536a72f0dc3c34c58b9f75eb64a28370dcbeb158c50"
+    },
+    {
+      "path": "openspec/changes/establish-clinicflow-local-foundation/adr-index-glossary-reference.md",
+      "bytes": 52,
+      "sha256": "4c2e9886f30cb6ca9a6cf327265ab3cf70b370055545c36ef9eba9b27f5b5f66"
+    },
+    {
+      "path": "openspec/changes/establish-clinicflow-local-foundation/adr-index.md",
+      "bytes": 1173,
+      "sha256": "f676db0179efe6e538e21f7737a769c2a8e1a4c65a6de70c2f8228b7eabff8af"
+    },
+    {
+      "path": "openspec/changes/establish-clinicflow-local-foundation/design-glossary-reference.md",
+      "bytes": 232,
+      "sha256": "d45832f69f21d5b022fcd2bb409614737ec754c4e9cde991358268c826146e18"
+    },
+    {
+      "path": "openspec/changes/establish-clinicflow-local-foundation/design.md",
+      "bytes": 10821,
+      "sha256": "3a2ebe1838f416bcd61174fcdcd5b22252f1402a2500892d34b8aef658803e5f"
+    },
+    {
+      "path": "openspec/changes/establish-clinicflow-local-foundation/proposal-glossary-reference.md",
+      "bytes": 333,
+      "sha256": "fa6a923fb3ddf2c2f04db4a33e942ec5aedf5a7845be8dcf043d181fa19c1c74"
+    },
+    {
+      "path": "openspec/changes/establish-clinicflow-local-foundation/proposal.md",
+      "bytes": 3658,
+      "sha256": "07fdc18a1eb476f6ce37942102e3b6c46ddb55a0743bd7884ef774434229ace5"
+    },
+    {
+      "path": "openspec/changes/establish-clinicflow-local-foundation/specs/local-runtime-foundation/spec-glossary-reference.md",
+      "bytes": 358,
+      "sha256": "6a4249f60a3fc5b876470d552ba9a889d47729c437426428d477de43c11f6d6e"
+    },
+    {
+      "path": "openspec/changes/establish-clinicflow-local-foundation/specs/local-runtime-foundation/spec.md",
+      "bytes": 9359,
+      "sha256": "bb9398358533b3bdd7363b7e39a60d5bd32dce511a0d3c49bc7a93f5a40d6635"
+    },
+    {
+      "path": "openspec/changes/establish-clinicflow-local-foundation/tasks-glossary-reference.md",
+      "bytes": 212,
+      "sha256": "39d5b755d467bf1710d6de09e420ef1380809ea343983f0cfccfd0ce9c7d4509"
+    },
+    {
+      "path": "openspec/changes/establish-clinicflow-local-foundation/tasks.md",
+      "bytes": 5372,
+      "sha256": "a3c16eb467254e87efce93109741a6309f0fbdb83985e38d48d861ffe5c18282"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/adr-index.md",
+      "bytes": 1141,
+      "sha256": "478773683cc6f2fa6ab971212ee27f3585ee6f16b0a08bd2f88f8907633c24e0"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/design.md",
+      "bytes": 19868,
+      "sha256": "7e38b210753136b887272c2f2d46519f47cbe20085909d5cfa1627ed403c4d97"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/execution-plan.md",
+      "bytes": 46227,
+      "sha256": "eb55f37a844a0cbcdf9295ca438820aedc133bf3fb9692a3f6c2c03627345d6a"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/tasks.md",
+      "bytes": 12179,
+      "sha256": "925f99bd0d23399399567677a1c9a17184224173120e883ab7bbc2f9a2e9174e"
+    },
+    {
+      "path": "openspec/config.yaml",
+      "bytes": 8890,
+      "sha256": "bba22014e9266e3efc9d99956bffd11b62e2d848c0c1ea139f424f7023b064c6"
+    },
+    {
+      "path": "openspec/schemas/intent-driven/schema.yaml",
+      "bytes": 11041,
+      "sha256": "b451ca7f975772c3efc38dad88f678df807792bc1f9c1ce845d2b3e16b541744"
+    },
+    {
+      "path": "openspec/schemas/intent-driven/templates/adr-index.md",
+      "bytes": 756,
+      "sha256": "85b89577f5ca89b12b6134e5dbb5ce674534260d755f157bbcaa8f276d38c1f4"
+    },
+    {
+      "path": "scripts/check-process.mjs",
+      "bytes": 15015,
+      "sha256": "9b6cfff3bad228773afc4cfe6a725a13331946fc367e8087bf6644a4c79c224d"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "recordedOn": "2026-11-12",
+  "timezone": "Asia/Saigon",
+  "scope": "Planning and read-only environment preflight; no application build/test execution",
+  "documentsChecked": 15,
+  "discoveryRevision": "0.7",
+  "discoveryAcceptanceExamples": 39,
+  "foundation": {
+    "change": "establish-clinicflow-local-foundation",
+    "requirements": 8,
+    "scenarios": 15,
+    "tasks": {
+      "total": 21,
+      "complete": 0
+    },
+    "applicationImplementation": "Not Started"
+  },
+  "observedCli": {
+    "strictValidation": {
+      "result": "Passed",
+      "initialWarning": "Draft status prose before the first section would not be synced; removed and strict recheck passed"
+    },
+    "schemaValidation": "Passed",
+    "doctor": "Healthy",
+    "applyArtifactState": "ready",
+    "note": "CLI results summarized from observed output; ready denotes artifact dependencies, not gate, git or runtime readiness"
+  },
+  "environment": {
+    "dotnetSdks": [
+      "10.0.102",
+      "10.0.301"
+    ],
+    "sdk11Available": false,
+    "node": "24.13.0",
+    "npm": "11.6.2",
+    "dockerClient": "29.3.1",
+    "dockerEngine": "Unavailable: local Linux engine named pipe missing",
+    "postgresCliOnPath": false,
+    "note": "No proof PostgreSQL is installed or absent outside PATH; no source build/test/deploy performed"
+  },
+  "sourceHashes": [
+    {
+      "file": "ClinicFlow_EPICS_Phase123_MoRong_v2.xlsx",
+      "sha256": "186a72ac7c5579edef896d16c7263fa001fb52bad1de11e63d821f3efa8fae89",
+      "unchanged": true
+    },
+    {
+      "file": "ClinicFlow_Phan_tich_nghiep_vu_v2.pdf",
+      "sha256": "30084ad132c48abfe0872081f7424d994bfa3c6d96186eca20e99d8aadce9a49",
+      "unchanged": true
+    },
+    {
+      "file": "ClinicFlow_Phan_tich_nghiep_vu_va_Thiet_ke_he_thong_v2.docx",
+      "sha256": "5558550c794e5b9362dcd2855584426e42cea4798b92209f1aa19d4e97b42f6f",
+      "unchanged": true
+    }
+  ],
+  "issues": [],
+  "passed": true
+}

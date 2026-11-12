@@ -1,0 +1,87 @@
+{
+  "recordedAt": "2026-11-12T06:49:14.7602463Z",
+  "timezone": "Asia/Saigon",
+  "dependency": "PyYAML 6.0.3 in ignored tmp/p0-python",
+  "results": [
+    {
+      "skill": "adversarial-authoring",
+      "exitCode": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "architectural-decision-records",
+      "exitCode": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "c4-diagrams",
+      "exitCode": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "gherkin-authoring",
+      "exitCode": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "glossary",
+      "exitCode": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "grill-me",
+      "exitCode": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "openspec-apply-change",
+      "exitCode": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "openspec-archive-change",
+      "exitCode": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "openspec-bulk-apply-change",
+      "exitCode": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "openspec-continue-change",
+      "exitCode": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "openspec-explore",
+      "exitCode": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "openspec-git-discipline",
+      "exitCode": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "openspec-new-change",
+      "exitCode": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "openspec-propose",
+      "exitCode": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "openspec-sync-specs",
+      "exitCode": 0,
+      "output": "Skill is valid!"
+    },
+    {
+      "skill": "openspec-verify-change",
+      "exitCode": 0,
+      "output": "Skill is valid!"
+    }
+  ]
+}

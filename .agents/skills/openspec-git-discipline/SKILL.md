@@ -2,7 +2,8 @@
 name: openspec-git-discipline
 description: Use when running OpenSpec propose, continue, apply, verify, archive, or worktree workflows where proposal artifacts, branches, merges, or archive timing affect git history.
 license: MIT
-compatibility: Requires git and OpenSpec workflow artifacts.
+metadata:
+  compatibility: Requires git and OpenSpec workflow artifacts.
 ---
 
 # OpenSpec Git Discipline
@@ -22,18 +23,18 @@ Never create commits, branches, or merges unless the user explicitly asks.
 | Moment | Gate |
 | --- | --- |
 | Before propose | Prefer `main`; if not, warn and ask whether to continue intentionally. |
-| During continue | Before creating the next artifact, ask the user to commit completed artifact changes or explicitly continue without that checkpoint. |
-| After propose | Ask the user to commit proposal artifacts; offer to create a PR branch for review. |
+| During continue | Continue the authorized planning scope without requiring a commit between every artifact. Reuse the user's settled decisions. |
+| After propose | Report planning state and any missing checkpoint before apply; do not create a commit or PR branch without authorization. |
 | Before apply | Confirm the proposal change is committed on `main`; then apply may run from `main`, a branch, or a worktree. |
 | Before archive | Stop unless implementation is merged back to `main` and archive is running from `main`. |
-| After archive | Ask the user to commit archive/spec sync changes. |
+| After archive | Report local changes and continue the authorized next step. Commit archive/spec sync changes only when authorized. |
 
 ## Required Checks
 
 Before apply:
 
 1. Run `git status --short`.
-2. Verify `openspec/changes/<change>/` has no uncommitted proposal files.
+2. Verify the planning inputs at apply start are committed on `main`; distinguish expected task-progress updates during implementation from new scope/design changes that require review.
 3. Verify the proposal change exists on `main` before applying from any branch/worktree.
 
 Use this language if the proposal has not reached `main`:
@@ -54,7 +55,7 @@ Use this language:
 
 - Applying a proposal that exists only on the current branch/worktree.
 - Treating worktree visibility as proof that the proposal reached `main`.
-- Creating the next continue artifact without asking about committing the previous one.
+- Expanding the authorized planning scope or silently changing settled requirements.
 - Archiving from a feature branch or before implementation is merged to `main`.
 - Auto-committing, branching, or merging without explicit user approval.
 

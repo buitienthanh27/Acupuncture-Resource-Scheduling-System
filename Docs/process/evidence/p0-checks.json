@@ -1,0 +1,180 @@
+{
+  "recordedAt": "2026-11-12T06:49:11.160Z",
+  "timezone": "Asia/Saigon",
+  "scope": "P0 tooling and planning; not application tests or gate approval",
+  "checks": [
+    {
+      "name": "Schema contract",
+      "result": "Passed",
+      "details": {
+        "adr": "adr-index.md",
+        "specs": "specs/**/spec.md"
+      }
+    },
+    {
+      "name": "Markdown links, companions and traceability",
+      "result": "Passed",
+      "details": {
+        "markdownFiles": 28,
+        "capabilities": 5,
+        "requirements": 21,
+        "tasks": 26
+      }
+    },
+    {
+      "name": "Active ADR review content",
+      "result": "Passed",
+      "details": {
+        "index": "adr-index.md",
+        "approvalInferred": false
+      }
+    },
+    {
+      "name": "Skill metadata and retained authorization boundaries",
+      "result": "Passed",
+      "details": {
+        "skillCount": 16,
+        "optionalDelegationIsNotDefault": true
+      }
+    },
+    {
+      "name": "OpenSpec schema validation",
+      "result": "Passed",
+      "details": {
+        "command": "openspec schema validate intent-driven --json",
+        "exitCode": 0,
+        "data": {
+          "name": "intent-driven",
+          "path": "D:\\Acupuncture-Scheduling-System\\openspec\\schemas\\intent-driven",
+          "valid": true,
+          "issues": []
+        }
+      }
+    },
+    {
+      "name": "OpenSpec strict change validation",
+      "result": "Passed",
+      "details": {
+        "command": "openspec validate establish-solo-development-process --type change --strict --json --no-interactive",
+        "exitCode": 0,
+        "data": {
+          "items": [
+            {
+              "id": "establish-solo-development-process",
+              "type": "change",
+              "valid": true,
+              "issues": [],
+              "durationMs": 60
+            }
+          ],
+          "summary": {
+            "totals": {
+              "items": 1,
+              "passed": 1,
+              "failed": 0
+            },
+            "byType": {
+              "change": {
+                "items": 1,
+                "passed": 1,
+                "failed": 0
+              }
+            }
+          },
+          "version": "1.0",
+          "root": {
+            "path": "D:\\Acupuncture-Scheduling-System",
+            "source": "nearest"
+          }
+        }
+      }
+    },
+    {
+      "name": "OpenSpec doctor",
+      "result": "Passed",
+      "details": {
+        "command": "openspec doctor --json",
+        "exitCode": 0,
+        "data": {
+          "root": {
+            "path": "D:\\Acupuncture-Scheduling-System",
+            "source": "nearest",
+            "healthy": true,
+            "status": []
+          },
+          "store": null,
+          "references": [],
+          "status": []
+        }
+      }
+    }
+  ],
+  "pilot": [
+    {
+      "name": "Auxiliary ADR files cannot replace missing index",
+      "result": "Passed",
+      "actual": {
+        "proposal": "done",
+        "specs": "done",
+        "design": "done",
+        "adr": "ready",
+        "tasks": "blocked"
+      }
+    },
+    {
+      "name": "No significant decision completes review without fake ADR",
+      "result": "Passed",
+      "actual": {
+        "proposal": "done",
+        "specs": "done",
+        "design": "done",
+        "adr": "done",
+        "tasks": "ready"
+      }
+    },
+    {
+      "name": "Real decision link retains Proposed status",
+      "result": "Passed",
+      "actual": {
+        "proposal": "done",
+        "specs": "done",
+        "design": "done",
+        "adr": "done",
+        "tasks": "ready",
+        "approvalInferred": false
+      }
+    },
+    {
+      "name": "Not Applicable cannot hide an existing decision ADR",
+      "result": "Passed",
+      "actual": {
+        "contentFindings": [
+          "Not Applicable contradicts real ADR files"
+        ]
+      }
+    },
+    {
+      "name": "Malformed index is rejected by content check even when CLI sees a file",
+      "result": "Passed",
+      "actual": {
+        "cli": "done",
+        "contentFindings": [
+          "Missing concrete Reason"
+        ]
+      }
+    },
+    {
+      "name": "Spec companion cannot complete missing main spec",
+      "result": "Passed",
+      "actual": {
+        "proposal": "done",
+        "specs": "ready",
+        "design": "done",
+        "adr": "done",
+        "tasks": "blocked"
+      }
+    }
+  ],
+  "issues": [],
+  "passed": true
+}

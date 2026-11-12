@@ -1,0 +1,27 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pfx
+*.p12
+*.pem
+*.key
+
+# .NET and frontend build output
+**/bin/
+**/obj/
+**/node_modules/
+**/dist/
+**/coverage/
+**/TestResults/
+
+# Editor and temporary process fixtures
+.vs/
+.idea/
+tmp/
+.process-fixtures/
+*.log
+*.tmp
+
+# Keep .agents, Docs, glossary, OpenSpec and reviewed evidence versionable.

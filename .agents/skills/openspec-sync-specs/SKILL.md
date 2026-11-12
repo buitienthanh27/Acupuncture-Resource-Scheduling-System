@@ -2,8 +2,8 @@
 name: openspec-sync-specs
 description: Sync delta specs from a change to main specs. Use when the user wants to update main specs with changes from a delta spec, without archiving the change.
 license: MIT
-compatibility: Requires openspec CLI.
 metadata:
+  compatibility: Requires openspec CLI.
   author: openspec
   version: "1.0"
   generatedBy: "1.3.1"
@@ -17,13 +17,13 @@ This is an **agent-driven** operation - you will read delta specs and directly e
 
 **Steps**
 
-1. **If no change name provided, prompt for selection**
+1. **Resolve the intended change**
 
-   Run `openspec list --json` to get available changes. Use the **AskUserQuestion tool** to let the user select.
+   Use the explicitly named change or the change clearly identified in the conversation. Run `openspec list --json` and ask for selection only when the intended scope is genuinely ambiguous.
 
    Show changes that have delta specs (under `specs/` directory).
 
-   **IMPORTANT**: Do NOT guess or auto-select a change. Always let the user choose.
+   Do not guess between ambiguous changes or ask the user to repeat a settled selection.
 
 2. **Find delta specs**
 

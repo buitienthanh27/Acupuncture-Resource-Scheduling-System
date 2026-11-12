@@ -1,11 +1,14 @@
 ---
 name: adversarial-authoring
-description: Use when rules or instructions mention "adversarial-authoring", "adversarial authoring", "must use adversarial-authoring skill", "model council", "cross-model review", or "mixture of models"; coordinates adversarial authoring and review subagents and records council notes.
+description: Use when the user explicitly requests adversarial or cross-model authoring and review with delegated roles; excludes ordinary solo document authoring and routine review.
 license: MIT
-compatibility: Requires subagents named adversarial-author and adversarial-reviewer in .claude/agents/.
+metadata:
+  compatibility: Conditional; requires an explicit delegation request and available author/reviewer capabilities, not automatically configured named agents.
 ---
 
 # Adversarial Authoring
+
+**Availability:** Not part of the default solo flow. If independent/delegated review is specifically requested but unavailable, explain that limitation. A solo review may be offered under its actual name and must not be reported as independent or cross-model review.
 
 Use this skill when an artifact rule, user request, or instruction says to use adversarial authoring, a model council, cross-model review, or a mixture of models.
 
@@ -32,7 +35,7 @@ The goal is to reduce single-perspective bias by having one configured subagent 
 
 ## Subagents
 
-Use these hard-coded subagents from `.claude/agents/`, invoked with the Agent tool:
+The role descriptions under `.agents/agents/` are references, not automatically configured agents. Use the roles below only through capabilities actually available in the current environment and explicitly requested by the user; do not assume an Agent tool or simulate delegation:
 
 - `adversarial-author`: authors the initial draft.
 - `adversarial-reviewer`: reviews and challenges the draft.

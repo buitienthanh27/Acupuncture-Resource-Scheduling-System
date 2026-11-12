@@ -2,8 +2,8 @@
 name: openspec-verify-change
 description: Verify implementation matches change artifacts. Use when the user wants to validate that implementation is complete, correct, and coherent before archiving.
 license: MIT
-compatibility: Requires openspec CLI.
 metadata:
+  compatibility: Requires openspec CLI.
   author: openspec
   version: "1.0"
   generatedBy: "1.3.1"
@@ -15,15 +15,15 @@ Verify that an implementation matches the change artifacts (specs, tasks, design
 
 **Steps**
 
-1. **If no change name provided, prompt for selection**
+1. **Resolve the intended change**
 
-   Run `openspec list --json` to get available changes. Use the **AskUserQuestion tool** to let the user select.
+   Use the explicitly named change or the change clearly identified in the conversation. Run `openspec list --json` and ask for selection only when the intended scope is genuinely ambiguous.
 
    Show changes that have implementation tasks (tasks artifact exists).
    Include the schema used for each change if available.
    Mark changes with incomplete tasks as "(In Progress)".
 
-   **IMPORTANT**: Do NOT guess or auto-select a change. Always let the user choose.
+   Do not guess between ambiguous changes or ask the user to repeat a settled selection.
 
 2. **Check status to understand the schema**
    ```bash

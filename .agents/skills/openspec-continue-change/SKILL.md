@@ -2,8 +2,8 @@
 name: openspec-continue-change
 description: Continue working on an OpenSpec change by creating the next artifact. Use when the user wants to progress their change, create the next artifact, or continue their workflow.
 license: MIT
-compatibility: Requires openspec CLI.
 metadata:
+  compatibility: Requires openspec CLI.
   author: openspec
   version: "1.0"
   generatedBy: "1.3.1"
@@ -15,19 +15,9 @@ Continue working on a change by creating the next artifact.
 
 **Steps**
 
-1. **If no change name provided, prompt for selection**
+1. **Resolve the intended change**
 
-   Run `openspec list --json` to get available changes sorted by most recently modified. Then use the **AskUserQuestion tool** to let the user select which change to work on.
-
-   Present the top 3-4 most recently modified changes as options, showing:
-   - Change name
-   - Schema (from `schema` field if present, otherwise "spec-driven")
-   - Status (e.g., "0/5 tasks", "complete", "no tasks")
-   - How recently it was modified (from `lastModified` field)
-
-   Mark the most recently modified change as "(Recommended)" since it's likely what the user wants to continue.
-
-   **IMPORTANT**: Do NOT guess or auto-select a change. Always let the user choose.
+   Use the change named by the user or clearly identified in the current conversation. If only one active change exists and it matches the task, use it. Ask for selection only when multiple changes make the scope genuinely ambiguous. Do not ask the user to repeat an already settled selection.
 
 2. **Check current status**
    ```bash
@@ -69,7 +59,7 @@ Continue working on a change by creating the next artifact.
      - Apply `context` and `rules` as constraints when writing - but do NOT copy them into the file
      - Write to the output path specified in instructions
    - Show what was created and what's now unlocked
-   - STOP after creating ONE artifact
+   - Stop after one artifact only when that is the requested scope. Otherwise continue the authorized planning artifacts in dependency order.
 
    ---
 
@@ -107,7 +97,7 @@ Common artifact patterns:
 For other schemas, follow the `instruction` field from the CLI output.
 
 **Guardrails**
-- Create ONE artifact per invocation
+- Create the artifact(s) within the user's requested scope; complete dependency order without inventing additional approval checkpoints.
 - Always read dependency artifacts before creating a new one
 - Never skip artifacts or create out of order
 - If context is unclear, ask the user before creating

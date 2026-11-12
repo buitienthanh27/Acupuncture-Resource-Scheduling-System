@@ -9,8 +9,9 @@ schema: intent-driven
 # https://vite.dev/releases
 context: |
   Project: Acupuncture Scheduling System, an acupuncture appointment scheduling
-  system. Use Docs/KhaoSat_ChamCuu.docx and Docs/EPICS_ChamCuu.xlsx as business
-  discovery inputs. Do not infer requirements from the former AI Agent context.
+  system. Current discovery inputs are the ClinicFlow v2 DOCX, PDF and EPICS
+  workbook in Docs/. See Docs/process/handbook.md for exact source links.
+  Do not infer requirements from the former AI Agent context or missing old files.
 
   Current stage: planning and workflow configuration. The source layout below
   is a target convention; application projects have not been scaffolded yet.
@@ -101,6 +102,10 @@ context: |
   - Do not commit or push anything to GitHub. All work stays local.
   - Keep credentials out of source control; use environment variables or
     dotnet user-secrets for local configuration.
+  - Follow Docs/process/handbook.md and record actual evidence in
+    Docs/process/records.md. Continue authorized local work and subsequent
+    independent steps without re-asking decisions already settled by the user.
+    Ask when essential information or authorization for a distinct action is missing.
 
 rules:
   proposal:
@@ -125,8 +130,10 @@ rules:
     - Verify the .NET, EF Core and Npgsql versions are compatible stable releases.
   adr:
     - Must use architectural-decision-records skill
-    - Only for architecturally significant decisions. Small or routine changes
-      get no ADR - an empty adr/ directory is the expected outcome.
+    - Always create adr-index.md. Use Not Applicable with a concrete reason
+      for routine changes with no significant decision; zero ADR files is then
+      correct. Otherwise link real ADRs with their actual statuses. The index
+      and file presence do not constitute approval.
   tasks:
     - "Group tasks by bounded context and dependency: Domain -> Application ->
       Infrastructure and migrations -> API and DI wiring -> Frontend. Place

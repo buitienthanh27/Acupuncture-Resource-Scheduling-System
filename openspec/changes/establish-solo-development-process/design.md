@@ -2,7 +2,7 @@
 
 | Thuộc tính | Giá trị |
 | --- | --- |
-| Trạng thái | Draft — đặc tả chi tiết theo phương án đã chốt; chưa phê duyệt riêng thiết kế này hoặc thực hiện apply |
+| Trạng thái | Implemented locally trong scope P0 được giao; xem records cho checks và giới hạn, không tự phê duyệt G1–G7 sản phẩm |
 | Cơ sở | DEC-SDP-SOLO-001 trong [proposal](proposal.md), [roadmap](execution-plan.md), năm delta specs |
 | Phạm vi triển khai | P0.02–P0.07; chuẩn hóa công cụ, hướng dẫn và biểu mẫu cho toàn bộ quy trình |
 | Phạm vi chưa triển khai | P1–P8 của sản phẩm, phân tích tài liệu khách hàng, scaffold app, CI/Production |
@@ -60,7 +60,7 @@ flowchart LR
 - CLI chỉ kiểm tra trạng thái/cấu trúc; chất lượng nội dung và phê duyệt cần bằng chứng riêng.
 - Hồ sơ có thể chứa đầu ra checks hoặc quyết định thật; nội dung mẫu giữ trạng thái chưa thực hiện.
 - GitHub chỉ là remote đã liên kết; sơ đồ không thêm luồng push, CI hoặc deployment tự động.
-- Phần sổ tay và workflow điều chỉnh là thiết kế tương lai của P0; repository hiện tại chưa được sửa theo thiết kế này.
+- Sổ tay và workflow đã được thực hiện trong P0; sơ đồ không là bằng chứng phê duyệt gate hay triển khai ứng dụng.
 
 ## Goals / Non-Goals
 
@@ -181,7 +181,7 @@ Nếu cần khôi phục thay đổi tooling: dùng bản trước của schema/
 - Chưa có chấp thuận tạo commit cho checkpoint trước apply. Bộ planning hoàn chỉnh không thay thế điều kiện Git này.
 - Các chi tiết thiết kế và ADR mới ở trạng thái Draft/Proposed; DEC-SDP-SOLO-001 chốt phương án tổng thể, không được giả là đã chấp thuận mọi chi tiết vừa viết.
 
-## Kết quả kiểm tra bộ planning ngày 12/11/2026
+## Kết quả kiểm tra bộ planning trước apply ngày 12/11/2026
 
 | Kiểm tra đã thực hiện | Kết quả quan sát |
 | --- | --- |
@@ -193,4 +193,8 @@ Nếu cần khôi phục thay đổi tooling: dùng bản trước của schema/
 | Kiểm tra cấu trúc Markdown và traceability bằng script đọc file | 22 Markdown files, 5 capabilities, 21 requirements, 42 scenarios, 21 dòng mapping; không có links hỏng, ID trùng hoặc companion còn thiếu |
 | Git working tree | Main chưa có commit; không có commit/push được tạo trong bước lập planning |
 
-Kết quả trên chỉ kiểm chứng bộ tài liệu và trạng thái tooling hiện hành. Chưa sửa schema/skills theo thiết kế, chưa chạy pilot P0, chưa chạy tests ứng dụng và chưa ghi nhận gate triển khai nào đã đạt. Điều kiện Git trước apply vẫn cần được giải quyết theo chỉ dẫn của chủ dự án.
+Tại thời điểm kiểm tra planning nêu trên, schema/skills chưa được sửa và pilot chưa chạy. Sau đó người dùng cho phép commit baseline af7c1f6 và tiếp tục P0. Kết quả triển khai thật: [records](../../../Docs/process/records.md), 7 checks, 6 pilot cases, 16 skills hợp lệ và 26 task P0 hoàn thành; chưa có tests ứng dụng, gate sản phẩm hoặc commit triển khai/push.
+
+## Ghi chú triển khai P0
+
+Đã dùng `adr-index.md` và thu hẹp output spec thành `specs/**/spec.md` sau khi pilot xác nhận nguy cơ nhận companion thay main spec. Các điều kiện và lệnh cũ trong Context/Open Questions mô tả thời điểm lập thiết kế; trạng thái hiện hành và bằng chứng xem tại records. ADR vẫn giữ Proposed, không tự ghi một phê duyệt riêng của người dùng.

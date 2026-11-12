@@ -28,7 +28,7 @@ If the user asks to skip questions for speed, still preserve unresolved choices 
 3. Pick the smallest useful diagram set. Start with system context or container; add component, dynamic, or deployment only when it answers a real question.
 4. Draw the diagram using ASCII or plain Mermaid.
 5. Explain the diagram in 3-6 bullets: boundaries, responsibilities, key relationships, assumptions, and open questions.
-6. Stop before detailed design unless the user approves the diagram and asks to continue.
+6. For a diagram-only request, stop with the diagram and explanation. If the user already authorized detailed design or an entire planning stage, continue that scope after the presentation choices are settled; do not request duplicate permission for the same work.
 
 ## C4 Level Selection
 

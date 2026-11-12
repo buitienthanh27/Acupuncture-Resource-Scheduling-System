@@ -1,0 +1,113 @@
+{
+  "recordedAt": "2026-11-12T07:04:04.025Z",
+  "timezone": "Asia/Saigon",
+  "sources": [
+    {
+      "file": "ClinicFlow_EPICS_Phase123_MoRong_v2.xlsx",
+      "kind": "xlsx",
+      "sha256": "186a72ac7c5579edef896d16c7263fa001fb52bad1de11e63d821f3efa8fae89",
+      "sheets": [
+        {
+          "name": "00 Tong quan",
+          "nonemptyRows": 29
+        },
+        {
+          "name": "Phase 1",
+          "nonemptyRows": 88
+        },
+        {
+          "name": "Phase 2",
+          "nonemptyRows": 54
+        },
+        {
+          "name": "Phase 3",
+          "nonemptyRows": 52
+        },
+        {
+          "name": "Quy tac & Cau hoi",
+          "nonemptyRows": 37
+        },
+        {
+          "name": "Backlog MVP",
+          "nonemptyRows": 24
+        },
+        {
+          "name": "Du lieu mo phong",
+          "nonemptyRows": 39
+        },
+        {
+          "name": "Ke hoach 15 tuan",
+          "nonemptyRows": 26
+        },
+        {
+          "name": "Checklist EPICS",
+          "nonemptyRows": 23
+        },
+        {
+          "name": "V2_TongQuan",
+          "nonemptyRows": 12
+        },
+        {
+          "name": "Entities_36",
+          "nonemptyRows": 38
+        },
+        {
+          "name": "Rules_2026",
+          "nonemptyRows": 18
+        },
+        {
+          "name": "PhongVan_56",
+          "nonemptyRows": 58
+        },
+        {
+          "name": "Roles_TeamLead",
+          "nonemptyRows": 8
+        },
+        {
+          "name": "DecisionLog_12",
+          "nonemptyRows": 14
+        },
+        {
+          "name": "UAT_20",
+          "nonemptyRows": 22
+        },
+        {
+          "name": "Backlog_V2",
+          "nonemptyRows": 15
+        },
+        {
+          "name": "UserStories_V2",
+          "nonemptyRows": 12
+        },
+        {
+          "name": "Sources_V2",
+          "nonemptyRows": 8
+        }
+      ]
+    },
+    {
+      "file": "ClinicFlow_Phan_tich_nghiep_vu_v2.pdf",
+      "kind": "pdf",
+      "sha256": "30084ad132c48abfe0872081f7424d994bfa3c6d96186eca20e99d8aadce9a49",
+      "pages": 27
+    },
+    {
+      "file": "ClinicFlow_Phan_tich_nghiep_vu_va_Thiet_ke_he_thong_v2.docx",
+      "kind": "docx",
+      "sha256": "5558550c794e5b9362dcd2855584426e42cea4798b92209f1aa19d4e97b42f6f",
+      "nonemptyBlocks": 630,
+      "tables": 36,
+      "inlineImages": 2
+    }
+  ],
+  "comparison": {
+    "method": "Normalized paragraph text, minimum 50 alphanumeric characters; not byte/layout equivalence",
+    "paragraphsCompared": 199,
+    "paragraphsFound": 199
+  },
+  "visuallyInspectedPdfPages": [
+    17,
+    20
+  ],
+  "sourceFilesModified": false
+}

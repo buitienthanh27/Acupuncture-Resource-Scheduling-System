@@ -1,0 +1,364 @@
+{
+  "kind": "P0 pre-change baseline",
+  "recordedAt": "2026-11-12T06:32:06.196Z",
+  "timezone": "Asia/Saigon",
+  "gitCommit": "af7c1f6927486fbeaa68e809357906740247d8bc",
+  "branch": "main",
+  "files": [
+    {
+      "path": ".agents/agents/adversarial-author.md",
+      "bytes": 1138,
+      "sha256": "8bf2db40a2f0cefd4a7950d731ecf44d537b12760df4b523cd191953d8c92ece"
+    },
+    {
+      "path": ".agents/agents/adversarial-reviewer.md",
+      "bytes": 1304,
+      "sha256": "469b11ac4f3626bcf40976ba853fa01accabb45dd90749a7867e04bb5bf7a352"
+    },
+    {
+      "path": ".agents/commands/opsx-apply.md",
+      "bytes": 4664,
+      "sha256": "1f3523f6616aed8cf716365d8155497de48c68616bcfccb26bb320339e7ab560"
+    },
+    {
+      "path": ".agents/commands/opsx-archive.md",
+      "bytes": 5088,
+      "sha256": "764b71b54ef7cd5480ff991c1e8ffd9f8a06914e07c734da5ce0f3b7815c279a"
+    },
+    {
+      "path": ".agents/commands/opsx-bulk-apply.md",
+      "bytes": 1969,
+      "sha256": "02f13a82266bb28e2dc0e73edbb4efff303bd3a9c3faceed1c45cb9a27eee3d6"
+    },
+    {
+      "path": ".agents/commands/opsx-continue.md",
+      "bytes": 4987,
+      "sha256": "84253c1ab2e1e573ff2a051db1814ffb20779d7434aec4772447aeb39d17085b"
+    },
+    {
+      "path": ".agents/commands/opsx-explore.md",
+      "bytes": 6837,
+      "sha256": "6bb7e12de38be229a6c52508091a43a77d31314b447d2c7f347dc032795a865c"
+    },
+    {
+      "path": ".agents/commands/opsx-new.md",
+      "bytes": 2651,
+      "sha256": "923bfbe4308bf11a67f71b414f9ef43e19d110c04127c15c84fed19c4a651e34"
+    },
+    {
+      "path": ".agents/commands/opsx-propose.md",
+      "bytes": 4438,
+      "sha256": "bc251c50d6ad745506331eed38a3365047f42f2afe143870e0cb43b6c009a86d"
+    },
+    {
+      "path": ".agents/commands/opsx-sync.md",
+      "bytes": 4411,
+      "sha256": "5dc507a9159c77290d175520e809d76cd85f270213d1dd668d9730eb0bd650ea"
+    },
+    {
+      "path": ".agents/commands/opsx-verify.md",
+      "bytes": 6571,
+      "sha256": "6c7d9fe154e5a54cf5c58d0ba17d3623524f0498c26a83035e25afa502dc82e3"
+    },
+    {
+      "path": ".agents/skills/adversarial-authoring/SKILL.md",
+      "bytes": 4199,
+      "sha256": "14e47fa9c679f940183809a52139e0e2b78f422c934fdee2c8b5f4dab697b232"
+    },
+    {
+      "path": ".agents/skills/architectural-decision-records/SKILL.md",
+      "bytes": 4187,
+      "sha256": "491cd2129cc6e576d00af4831f2d6c1340ae1f88fd3e7151cfe3d93c438c6617"
+    },
+    {
+      "path": ".agents/skills/architectural-decision-records/preferences.md",
+      "bytes": 355,
+      "sha256": "9805c973f549ba02b280a915d8cea2ed301c65d42a427096e6faaaad53fd8045"
+    },
+    {
+      "path": ".agents/skills/architectural-decision-records/templates/custom.md",
+      "bytes": 348,
+      "sha256": "30737accfa09ad495f74ba1e4dda11aebbaea38e7fefb7976d411ef32bd741a7"
+    },
+    {
+      "path": ".agents/skills/architectural-decision-records/templates/madr-full.md",
+      "bytes": 1329,
+      "sha256": "755d51d64fcc2aca795f1663362951d4cc30bc608365011968b3c913b51562cf"
+    },
+    {
+      "path": ".agents/skills/architectural-decision-records/templates/madr-minimal.md",
+      "bytes": 533,
+      "sha256": "451a03e97cd7d2c2d66c970d580397cfe28e2f9e8d77c5bb286c5b33d86ca441"
+    },
+    {
+      "path": ".agents/skills/architectural-decision-records/templates/nygard.md",
+      "bytes": 505,
+      "sha256": "c09183f56167613e26612115c27d0ba888f1608f96e8fbf85e2736b950eada35"
+    },
+    {
+      "path": ".agents/skills/architectural-decision-records/templates/y-statement.md",
+      "bytes": 523,
+      "sha256": "afe41f4de6f70092851d5b8aef41be8c42dab48822353acfee024416be3857b3"
+    },
+    {
+      "path": ".agents/skills/c4-diagrams/SKILL.md",
+      "bytes": 4170,
+      "sha256": "7d81f828b8635158705bd9225bd29c3433520404ba92bd119434ce963875092e"
+    },
+    {
+      "path": ".agents/skills/c4-diagrams/templates.md",
+      "bytes": 4257,
+      "sha256": "c38253f8430e2db10be56e4a26b88ed06bd4fe7796ef0d29e8bc03255a1c9238"
+    },
+    {
+      "path": ".agents/skills/gherkin-authoring/SKILL.md",
+      "bytes": 5647,
+      "sha256": "d0f6ef4ddadc57c31f2575cfed8fa32a08c7f283a171203ddff99740d344bd45"
+    },
+    {
+      "path": ".agents/skills/glossary/README.md",
+      "bytes": 2715,
+      "sha256": "4e2e8ef85e35ba7076496ace1c2a9cf4b880c4039a0add8082225cae850a0908"
+    },
+    {
+      "path": ".agents/skills/glossary/SKILL.md",
+      "bytes": 3155,
+      "sha256": "8c2f88e59ef6dab28ba97a292a7b7ae43d3fe1d88b27f3025f8c36581c53aedf"
+    },
+    {
+      "path": ".agents/skills/grill-me/SKILL.md",
+      "bytes": 645,
+      "sha256": "c9df326c4ab635765ea884471d21f4e21d5b0ec85aec43a06c238307841eb4bc"
+    },
+    {
+      "path": ".agents/skills/openspec-apply-change/SKILL.md",
+      "bytes": 4930,
+      "sha256": "f5be8d3078e511a057fa355f8176f239f19a6999a48db10058002e0d758a2671"
+    },
+    {
+      "path": ".agents/skills/openspec-archive-change/SKILL.md",
+      "bytes": 4271,
+      "sha256": "3d8d30b07931fd719e7c40d5982c14245c7fd39c14c4b460e5056d17839dc9ae"
+    },
+    {
+      "path": ".agents/skills/openspec-bulk-apply-change/SKILL.md",
+      "bytes": 5859,
+      "sha256": "92ac20c719bdda3a2e960e1be24b535efe819a9423aa3a6045736be12be6a3e7"
+    },
+    {
+      "path": ".agents/skills/openspec-continue-change/SKILL.md",
+      "bytes": 5172,
+      "sha256": "5b070e3233be45d85d037a9c920a88564e1c566f84b113cc7736a8c725acb2dd"
+    },
+    {
+      "path": ".agents/skills/openspec-explore/SKILL.md",
+      "bytes": 11026,
+      "sha256": "de68127c6bd38eccad6b141537c94b11600c9e8dd96eb1850345834786efef3c"
+    },
+    {
+      "path": ".agents/skills/openspec-git-discipline/SKILL.md",
+      "bytes": 3045,
+      "sha256": "bba977bbff40969128635f4c1435383415a88fb3ddfb793f5ed5c48839024ea2"
+    },
+    {
+      "path": ".agents/skills/openspec-new-change/SKILL.md",
+      "bytes": 2954,
+      "sha256": "f50865e87a7312764391e89541c62e0215cf8c2d4c6f79e496507d28b54c2810"
+    },
+    {
+      "path": ".agents/skills/openspec-propose/SKILL.md",
+      "bytes": 4756,
+      "sha256": "0a354e0764d3fe4575b2baa3aa1d6b58466585de36445723c5d8c090741cbc24"
+    },
+    {
+      "path": ".agents/skills/openspec-sync-specs/SKILL.md",
+      "bytes": 4623,
+      "sha256": "7ddff39675ecbf99d9d4cabc284c3e029830ca1e0fab5e25b6c4fa88f70ee65b"
+    },
+    {
+      "path": ".agents/skills/openspec-verify-change/SKILL.md",
+      "bytes": 6767,
+      "sha256": "56da1e16398455ca5256a59ad95e74fc4247930d89c255054200c8c2c6e0f204"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 2166,
+      "sha256": "f849c9353964f4f4e1959704195662e96de6a54838a109e6a5b93ce01875ca4b"
+    },
+    {
+      "path": "Docs/ClinicFlow_EPICS_Phase123_MoRong_v2.xlsx",
+      "bytes": 65374,
+      "sha256": "186a72ac7c5579edef896d16c7263fa001fb52bad1de11e63d821f3efa8fae89"
+    },
+    {
+      "path": "Docs/ClinicFlow_Phan_tich_nghiep_vu_v2.pdf",
+      "bytes": 961404,
+      "sha256": "30084ad132c48abfe0872081f7424d994bfa3c6d96186eca20e99d8aadce9a49"
+    },
+    {
+      "path": "Docs/ClinicFlow_Phan_tich_nghiep_vu_va_Thiet_ke_he_thong_v2.docx",
+      "bytes": 263583,
+      "sha256": "5558550c794e5b9362dcd2855584426e42cea4798b92209f1aa19d4e97b42f6f"
+    },
+    {
+      "path": "glossary/technical.md",
+      "bytes": 3716,
+      "sha256": "eeb49496af6779e4f1e64ac9748e89ecf7d59bf3f8a3013b7b726c45c0340d78"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/.openspec.yaml",
+      "bytes": 42,
+      "sha256": "d262a6cab64e214563795536a72f0dc3c34c58b9f75eb64a28370dcbeb158c50"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/adr-index-glossary-reference.md",
+      "bytes": 53,
+      "sha256": "be01da8a02d47b9e39bb7f3b7f13191074b98c2112bf974403b4eb10f8e1588c"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/adr-index.md",
+      "bytes": 944,
+      "sha256": "c0145e047f680bab391e997fa74ba5da998451220cd86e85bd1fec0356d91694"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/adr/0001-explicit-adr-completion-index-glossary-reference.md",
+      "bytes": 172,
+      "sha256": "ddc18dd1195f9ad5903ee14017c16cec0ebb4831faaefa8d2131a52b793f828f"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/adr/0001-explicit-adr-completion-index.md",
+      "bytes": 3492,
+      "sha256": "e9e34e973e866ff3bc10eaf591c2dd3ce2e2a04edcc8070a84a29f4a51a824fc"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/design-glossary-reference.md",
+      "bytes": 222,
+      "sha256": "e3ed6a30579449cb94c44f5d212f70c4fa6ccd4c2561a0f3c8a751fff8cc80a7"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/design.md",
+      "bytes": 19357,
+      "sha256": "b7e71117f2a26402791e97940d9b88ee8bba70cbb0059ac038612f1de4323c69"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/execution-plan-glossary-reference.md",
+      "bytes": 1396,
+      "sha256": "f21537aa9d0b6fe41a47fd987ac2d4f91e3ab9a18c2d60b7efbd3d4177c3b410"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/execution-plan.md",
+      "bytes": 45613,
+      "sha256": "aaf19b1306dcf8887ac76cab23860d9392dfd749d825d7e17136a7855e3dc462"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/proposal-glossary-reference.md",
+      "bytes": 780,
+      "sha256": "00e07c48d4916c6170f0c94901c488601da7fb8a187cc8ee349028a39df218ba"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/proposal.md",
+      "bytes": 10193,
+      "sha256": "043159e14aecdbe5c69ad63e6f3cdb92a812160e0e95c9f87c57334a518e832c"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/references/sdp-v1.0-source.txt",
+      "bytes": 18096,
+      "sha256": "20e07def5485c06cdeed634cc6930b9b876d3acb40247bccaa050a19548ca28e"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/specs/architecture-and-development-discipline/spec-glossary-reference.md",
+      "bytes": 282,
+      "sha256": "a002efb70cb511dfb4db87b557a5d46c4401cc43034e9a8fd9f83f328bc7baea"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/specs/architecture-and-development-discipline/spec.md",
+      "bytes": 5673,
+      "sha256": "e23ac0ba12696348d7ae0c5f8da6d6a7a707ffbe67f9a2641f3925d439093da5"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/specs/operations-and-process-improvement/spec-glossary-reference.md",
+      "bytes": 53,
+      "sha256": "be01da8a02d47b9e39bb7f3b7f13191074b98c2112bf974403b4eb10f8e1588c"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/specs/operations-and-process-improvement/spec.md",
+      "bytes": 3312,
+      "sha256": "79160c127edafd9d26a42f69f431f1639e38987eb1a78978567ea7517eccb5c2"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/specs/requirements-and-change-control/spec-glossary-reference.md",
+      "bytes": 409,
+      "sha256": "0b0f26db6983fcc4fc3fbf40a4c8bed77484a9222a5858ec1480e88ba356978b"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/specs/requirements-and-change-control/spec.md",
+      "bytes": 4168,
+      "sha256": "be93a519afc094494298a211c0e5d0e04bbbd78076890b91001e22d76ca1a194"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/specs/solo-delivery-governance/spec-glossary-reference.md",
+      "bytes": 507,
+      "sha256": "f230adcba51c175212c8b958e9b371e73cde61e305184f8b96f5af088a93252e"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/specs/solo-delivery-governance/spec.md",
+      "bytes": 5897,
+      "sha256": "34d8ed52a5847002c0d52fb0069cac3427d8cd480f719c14fb5c85f4f6817112"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/specs/verification-and-release-control/spec-glossary-reference.md",
+      "bytes": 379,
+      "sha256": "5270810da403a5db0cc4007d6565699cdfb51610330a67599052adf7f6edbe83"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/specs/verification-and-release-control/spec.md",
+      "bytes": 4166,
+      "sha256": "eff6ac984fd9e4c3dc425e0d9eef4640dc6c4388979a70819f2bf80f791f0500"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/tasks-glossary-reference.md",
+      "bytes": 184,
+      "sha256": "9cf7e9f48a15a4c2a07a3fb26d5e1a6c052fdcab29e983a464b3d0cde02ea0cc"
+    },
+    {
+      "path": "openspec/changes/establish-solo-development-process/tasks.md",
+      "bytes": 11917,
+      "sha256": "fb1af07e4d30319527bf99b3a35e13d5bf8b579128b4ddc8d9159d49f4d1af4c"
+    },
+    {
+      "path": "openspec/config.yaml",
+      "bytes": 8365,
+      "sha256": "ef190e207aa83de928cb209256e288ed2bcc493b9a149c179e446d366f3192a1"
+    },
+    {
+      "path": "openspec/schemas/intent-driven/schema.yaml",
+      "bytes": 10595,
+      "sha256": "df5dc661fd40321f74da1a36b6dab54083ba1c01102dc86881d9d217f31a6ff1"
+    },
+    {
+      "path": "openspec/schemas/intent-driven/templates/adr.md",
+      "bytes": 545,
+      "sha256": "cb5111adc2c1c74bc8b297fe1aa3c33ace29511d795d742f1833620ed3ac37a7"
+    },
+    {
+      "path": "openspec/schemas/intent-driven/templates/design.md",
+      "bytes": 321,
+      "sha256": "7d62a6b20118547fc62c2002aee7c1dc661b4a68097537499a1d2baf6531fb54"
+    },
+    {
+      "path": "openspec/schemas/intent-driven/templates/proposal.md",
+      "bytes": 911,
+      "sha256": "b0b2c06e8f5aec7449b7eda99502eca9b24379014298a35c72755c6e31a21ddc"
+    },
+    {
+      "path": "openspec/schemas/intent-driven/templates/spec.md",
+      "bytes": 206,
+      "sha256": "4f9899ef2870fc20d3aa6b9d47e2a294863b7cfe843213434569dc0bf9729aeb"
+    },
+    {
+      "path": "openspec/schemas/intent-driven/templates/tasks.md",
+      "bytes": 218,
+      "sha256": "30b8189ea586b66fdb03cd92a8f6d3d8961bf85a6f1f4f73e3517f1a182cd265"
+    }
+  ]
+}

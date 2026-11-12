@@ -5,6 +5,12 @@
   and bounded contexts.
 - The technology and architecture baseline is in `openspec/config.yaml`.
   Follow it when proposing changes or scaffolding application projects.
+- Use `Docs/process/handbook.md` as the operating guide, `templates.md` there
+  for record fields, and `records.md` for actual decisions and evidence.
+  The user asked to continue to subsequent steps after authorized work is
+  completed. Reuse settled decisions; ask only for essential missing input or
+  authorization outside the current scope. Git/push/deployment rights do not
+  expand automatically; the initial local baseline commit was authorized once.
 - The user approved the solo process proposal and execution roadmap on
   2026-11-12. See decision DEC-SDP-SOLO-001 in
   `openspec/changes/establish-solo-development-process/proposal.md`.

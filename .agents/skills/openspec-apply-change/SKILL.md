@@ -2,8 +2,8 @@
 name: openspec-apply-change
 description: Implement tasks from an OpenSpec change. Use when the user wants to start implementing, continue implementation, or work through tasks.
 license: MIT
-compatibility: Requires openspec CLI.
 metadata:
+  compatibility: Requires openspec CLI.
   author: openspec
   version: "1.0"
   generatedBy: "1.3.1"
@@ -20,9 +20,9 @@ Implement tasks from an OpenSpec change.
    If a name is provided, use it. Otherwise:
    - Infer from conversation context if the user mentioned a change
    - Auto-select if only one active change exists
-   - If ambiguous, run `openspec list --json` to get available changes and use the **AskUserQuestion tool** to let the user select
+   - If ambiguous, run `openspec list --json` to get available changes and use the available user-input capability to let the user select
 
-   Always announce: "Using change: <name>" and how to override (e.g., `/opsx-apply <other>`).
+   Always announce: "Using change: <name>" and how to override (e.g., `$openspec-apply-change <other>`).
 
 2. **Check status to understand the schema**
    ```bash
@@ -65,6 +65,8 @@ Implement tasks from an OpenSpec change.
    - Dynamic instruction from CLI
 
 6. **Implement tasks (loop until done or blocked)**
+
+   Before the first implementation mutation, follow `openspec-git-discipline` and verify the planning baseline on main using existing authorization. Do not create a commit, branch, merge or push to satisfy that checkpoint without the user's permission. Expected task-progress updates during an authorized apply are distinct from new scope changes.
 
    For each pending task:
    - Show which task is being worked on
